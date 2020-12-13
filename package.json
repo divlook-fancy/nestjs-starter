@@ -1,8 +1,8 @@
 {
-  "name": "hi-prototype",
+  "name": "nestjs-starter",
   "private": true,
   "version": "0.1.0",
-  "description": "Prototype of Handwriting Identity",
+  "description": "NestJs Starter",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
