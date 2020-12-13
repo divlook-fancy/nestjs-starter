@@ -30,8 +30,9 @@ export class CatsService {
         return cat
     }
 
-    update(index: number, cat: Cat) {
+    update(index: number, cat: Partial<Cat>) {
         this.cats[index] = {
+            ...this.cats[index],
             ...cat,
         }
     }

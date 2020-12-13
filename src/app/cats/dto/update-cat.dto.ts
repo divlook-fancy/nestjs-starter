@@ -1,9 +1,4 @@
-import { ApiProperty } from '@nestjs/swagger'
+import { PartialType } from '@nestjs/swagger'
+import { CreateCatDto } from '~app/cats/dto/create-cat.dto'
 
-export class UpdateCatDto {
-    @ApiProperty()
-    name: string
-
-    @ApiProperty()
-    age: number
-}
+export class UpdateCatDto extends PartialType(CreateCatDto) {}

@@ -8,11 +8,13 @@ import {
     Post,
     Put,
 } from '@nestjs/common'
+import { ApiTags } from '@nestjs/swagger'
 import { CreateCatDto, UpdateCatDto } from '~app/cats/dto'
 import { CatsService } from '~app/cats/cats.service'
 import { Cat } from '~app/cats/interfaces/cat.interface'
 
 @Controller('cats')
+@ApiTags('Cats')
 export class CatsController {
     constructor(private catsService: CatsService) {}
 
