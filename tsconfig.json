@@ -12,6 +12,10 @@
     "baseUrl": "./",
     "incremental": true,
     "paths": {
+      "~app/*": ["./src/app/*"],
+      "~plugins/*": ["./src/plugins/*"],
+      "~services/*": ["./src/services/*"],
+      "~interfaces/*": ["./src/interfaces/*"],
       "~/*": ["./*"]
     }
   }

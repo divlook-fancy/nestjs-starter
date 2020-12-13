@@ -1,15 +1,24 @@
-import { Injectable } from '@nestjs/common'
-import { Cat } from '~/src/cats/interfaces/cat.interface'
+import { Injectable, Logger } from '@nestjs/common'
+import { Cat } from '~app/cats/interfaces/cat.interface'
 
 @Injectable()
 export class CatsService {
+    private readonly logger = new Logger(CatsService.name)
     private readonly cats: Cat[] = []
+    private readonly max = 10
 
     create(cat: Cat) {
         this.cats.push(cat)
+
+        const total = this.cats.length
+
+        if (total > this.max) {
+            this.cats.splice(0, this.max - total)
+        }
     }
 
     findAll(): Cat[] {
+        this.logger.log('findAll')
         return this.cats
     }
 

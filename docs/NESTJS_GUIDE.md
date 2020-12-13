@@ -36,36 +36,47 @@ $ nest g controller cats
 ```
 root/
 ┃
-┣ dist/ --------------------- build 디렉토리
+┣ dist/ ---------------------------- Build 디렉토리
 ┃ ┗ ...
 ┃
-┣ docs/ --------------------- 문서 디렉토리
+┣ docs/ ---------------------------- 문서 디렉토리
 ┃ ┗ ...
 ┃
-┣ src/ ---------------------- source 디렉토리
-┃ ┣ cats/
-┃ ┃ ┣ dto/
-┃ ┃ ┃ ┣ create-cat.dto.ts
-┃ ┃ ┃ ┣ index.ts
-┃ ┃ ┃ ┗ update-cat.dto.ts
-┃ ┃ ┣ interfaces/
-┃ ┃ ┃ ┗ cat.interface.ts
-┃ ┃ ┣ cats.controller.spec.ts
-┃ ┃ ┣ cats.controller.ts
-┃ ┃ ┣ cats.module.ts
-┃ ┃ ┣ cats.service.spec.ts
-┃ ┃ ┗ cats.service.ts
+┣ src/ ----------------------------- Source 디렉토리
 ┃ ┃
-┃ ┣ app.controller.spec.ts
-┃ ┣ app.controller.ts
-┃ ┣ app.module.ts
-┃ ┣ app.service.ts
+┃ ┣ app/
+┃ ┃ ┃
+┃ ┃ ┣ cats/ ------------------------ 고양이 예제 디렉토리
+┃ ┃ ┃ ┣ dto/
+┃ ┃ ┃ ┃ ┣ create-cat.dto.ts
+┃ ┃ ┃ ┃ ┣ index.ts
+┃ ┃ ┃ ┃ ┗ update-cat.dto.ts
+┃ ┃ ┃ ┣ interfaces/
+┃ ┃ ┃ ┃ ┗ cat.interface.ts
+┃ ┃ ┃ ┣ cats.controller.spec.ts
+┃ ┃ ┃ ┣ cats.controller.ts
+┃ ┃ ┃ ┣ cats.module.ts
+┃ ┃ ┃ ┣ cats.service.spec.ts
+┃ ┃ ┃ ┗ cats.service.ts
+┃ ┃ ┃
+┃ ┃ ┣ app.controller.spec.ts
+┃ ┃ ┣ app.controller.ts
+┃ ┃ ┣ app.module.ts ---------------- App의 루트 모듈
+┃ ┃ ┣ app.service.ts
+┃ ┃ ┃
+┃ ┃ ┗ main.ts ---------------------- App의 인스턴스를 생성하기 위한 엔트리
 ┃ ┃
-┃ ┗ main.ts ----------------- app의 인스턴스를 생성하기 위한 엔트리
+┃ ┣ interfaces/ -------------------- Global Interfaces 디렉토리
+┃ ┃ ┗ ...
+┃ ┃
+┃ ┣ plugins/ ----------------------- Global Plugins 디렉토리
+┃ ┃ ┗ ...
+┃ ┃
+┃ ┗ services/ ---------------------- Global Services 디렉토리
+┃   ┗ ...
 ┃
-┗ test/ --------------------- test 디렉토리
-  ┣ app.e2e-spec.ts
-  ┗ jest-e2e.json
+┗ test/ ---------------------------- Test 디렉토리
+  ┗ ...
 ```
 
 ### Module
