@@ -11,4 +11,4 @@ services:
     working_dir: "/app"
     stdin_open: true
     tty: true
-    command: ["npm i && bash"]
+    command: ["bash"]

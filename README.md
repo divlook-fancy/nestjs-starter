@@ -25,7 +25,7 @@ Install [Docker](https://www.docker.com/products/docker-desktop)
 
 ```bash
 $ docker-compose up -d
-$ docker-compose exec app npm run start
+$ docker-compose exec app bash -c "npm i && npm start"
 ```
 
 ## Documents
