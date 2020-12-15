@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    image: "ghcr.io/divlook/node:latest"
+    container_name: "nest-app"
+    ports:
+      - "3000:3000"
+    network_mode: "bridge"
+    volumes:
+      - ".:/app"
+    working_dir: "/app"
+    stdin_open: true
+    tty: true
+    command: ["npm i && bash"]
